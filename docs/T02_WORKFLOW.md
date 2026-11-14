@@ -41,7 +41,7 @@ Dự đoán gốc nằm riêng ở `raw_predictions.csv`. Ảnh chưa duyệt gi
 - Pipeline chỉ đọc ảnh/metadata, manifest và tham số đã lưu; không đọc nhãn thủ công.
 - Công cụ `tools.calibrate_t02` từ chối ghi đè tham số đã chốt. Muốn đổi protocol phải dùng file cấu hình mới và ghi rõ lý do.
 - Nhãn eval đã được xem khi đối chiếu thủ công với trợ lý. Không mô tả tập này là hidden eval hay đánh giá mù.
-- Đã chạy đánh giá nội bộ theo metric contract được người học duyệt. Kết quả được sinh trong `out/internal_eval/`; nội dung báo cáo chính chờ người học duyệt trước khi điền.
+- Đã chạy đánh giá nội bộ theo metric contract được người học duyệt. Kết quả chạy ở `out/internal_eval/`, bản lưu nộp bài ở `reports/`; báo cáo đã được điền theo nội dung người học rà soát.
 
 ## Đánh giá nội bộ (giữ nguyên tham số đã chốt)
 

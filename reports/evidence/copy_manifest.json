@@ -62,11 +62,6 @@
       "sha256": "d510bb809fae35ee2edca2743e1ece3c6eb7eb23e88a3538e74c77112e4629e3"
     },
     {
-      "source": "out/poc/final_actions.csv",
-      "copy": "reports/evidence/poc/final_actions.csv",
-      "sha256": "3ba7ab301a9c0f534d61ea6edba2ccab9d1dc3c06621f40bc8f073bd16ca68ef"
-    },
-    {
       "source": "out/poc/run_info.json",
       "copy": "reports/evidence/poc/run_info.json",
       "sha256": "36b4d89f2d78e2f67bcf44bebfc384e3f6192c7e1dd8cbbe38965f35057cef38"

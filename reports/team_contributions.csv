@@ -1,5 +1,5 @@
 member,git_author_name,git_email,role,modules_files,commit_shas,evidence_note,presenter
-Nguyễn Việt Anh (2A2026030995),vietanhngx,ngvietanh240605@gmail.com,"Bài cá nhân: gán nhãn, duyệt ảnh, chốt policy; code/test có trợ lý AI hỗ trợ",data/manual/; src/pipeline.py; src/t02_qc.py; src/baseline_t02.py; src/t02_review_page.py; configs/; tools/; tests/test_t02_pipeline.py; reports/,,"96 nhãn được người học xác nhận; duyệt thật 20 ảnh; 11 KEEP, 9 RECAPTURE. Chưa có commit bài làm.",Chưa trình bày trên lớp; đã chuẩn bị bộ demo trong demo/
+Nguyễn Việt Anh (2A2026030995),vietanhngx,ngvietanh240605@gmail.com,"Bài cá nhân: gán nhãn, duyệt ảnh, chốt policy; code/test có trợ lý AI hỗ trợ",data/manual/; src/pipeline.py; src/t02_qc.py; src/baseline_t02.py; src/t02_review_page.py; configs/; tools/; tests/test_t02_pipeline.py; reports/,595f906b1ca4e60970c35d9d104517ddec808bf0,"96 nhãn được người học xác nhận; duyệt thật 20 ảnh; 11 KEEP, 9 RECAPTURE. Commit triển khai thực tế: 595f906b1ca4e60970c35d9d104517ddec808bf0.",Chưa trình bày trên lớp; đã chuẩn bị bộ demo trong demo/
 Không áp dụng — bài cá nhân,,,Không có thành viên khác,Không áp dụng,,Không áp dụng,Không áp dụng
 Không áp dụng — bài cá nhân,,,Không có thành viên khác,Không áp dụng,,Không áp dụng,Không áp dụng
 Không áp dụng — bài cá nhân,,,Không có thành viên khác,Không áp dụng,,Không áp dụng,Không áp dụng

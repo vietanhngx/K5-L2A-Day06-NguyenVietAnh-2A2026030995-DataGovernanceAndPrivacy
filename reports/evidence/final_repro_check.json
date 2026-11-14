@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-11-14T20:14:50+00:00",
+  "commit_exported": "595f906b1ca4e60970c35d9d104517ddec808bf0",
+  "method": "git archive; fresh output directories; existing prepared Python environment; no GT overlay",
+  "git_metadata_note": "Export has no .git; recorded Git metadata can resolve the enclosing repository. Source files are those exported from the stated commit.",
+  "preflight": "0 FAIL; 2 optional warnings",
+  "pytest": "59 passed, 39 skipped",
+  "first_poc_status": "HOLD / REVIEW_INCOMPLETE",
+  "after_replaying_real_review": "RECAPTURE; 20 confirmed reviews",
+  "actions": {
+    "KEEP": 11,
+    "RECAPTURE": 9,
+    "HOLD": 76
+  },
+  "same_primary_metrics_and_bootstrap_as_archived": true,
+  "human_review_events": 20,
+  "archive_sha256": "8d363874e70658064c7e7c18676d8e2700ffa5653dc690d4019cbb01ee00da04",
+  "source_export": "D:\\AI_ThucChien\\K5-L2A-Day06-NguyenVietAnh-2A2026030995-DataGovernanceAndPrivacy\\out\\submission_check\\f2ff665ed4\\source"
+}

@@ -44,7 +44,7 @@ real-data:           ## instructor only: needs HF_TOKEN in .env, run BEFORE clas
 	$(PY) -m tools.download_real_samples
 
 tag-demo:
-	git tag -a demo-180m -m "Demo freeze at minute 180"
+	git tag -a demo -m "Prepared T02 demo snapshot"
 
 tag-final:
-	git tag -a final-24h -m "Final submission"
+	git tag -a final -m "Final T02 submission snapshot"

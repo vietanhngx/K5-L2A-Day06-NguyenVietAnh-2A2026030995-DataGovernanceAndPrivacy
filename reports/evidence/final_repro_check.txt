@@ -1,0 +1,146 @@
+COMMAND: D:\AI_ThucChien\K5-L2A-Day06-NguyenVietAnh-2A2026030995-DataGovernanceAndPrivacy\.venv\Scripts\python.exe -X utf8 -m tools.preflight
+[OK  ] Python 3.13.15 (lab target 3.11)
+[OK  ] import numpy 2.5.4
+[OK  ] import pandas 3.1.1
+[OK  ] import PIL 13.0.0
+[OK  ] import cv2 5.0.0
+[OK  ] import sklearn 1.9.1
+[OK  ] import scipy 1.18.1
+[OK  ] import matplotlib 3.11.2
+[OK  ] import yaml 6.0.3
+[OK  ] import pytest 9.2.0
+[OK  ] t01 fixtures/t01_coverage (hashes match)
+[OK  ] t02 fixtures/t02_raw_qc (hashes match)
+[OK  ] t03 fixtures/t03_synthetic (hashes match)
+[OK  ] t04 fixtures/t04_sensor_sync (hashes match)
+[OK  ] t05 fixtures/t05_near_duplicate (hashes match)
+[OK  ] t06 fixtures/t06_release_gate (hashes match)
+[OK  ] t07 fixtures/t07_redaction (hashes match)
+[OK  ] t08 fixtures/t08_deletion (hashes match)
+[OK  ] t09 fixtures/t09_privacy_gate (hashes match)
+[OK  ] t10 fixtures/t10_domain_shift (hashes match)
+[OK  ] t11 fixtures/t11_label_errors (hashes match)
+[OK  ] t12 fixtures/t12_vendor_batches (hashes match)
+[OK  ] t13 fixtures/t13_rare_mining (hashes match)
+[OK  ] t14 fixtures/t14_auto_annotation (hashes match)
+[OK  ] offline guard blocks outbound network
+[WARN] data/real not present (optional; instructor runs tools/download_real_samples.py before class)
+[WARN] models_optional/ not present (only for pretrained T07/T14 models)
+[OK  ] no HF token in tracked files
+[OK  ] .env not tracked by git
+
+preflight: 0 FAIL, 2 WARN
+
+
+COMMAND: D:\AI_ThucChien\K5-L2A-Day06-NguyenVietAnh-2A2026030995-DataGovernanceAndPrivacy\.venv\Scripts\python.exe -X utf8 -m pytest -o addopts= -q
+...s....s...s............................ssssssssssssss................. [ 73%]
+....ssssssssssssssssssssss                                               [100%]
+59 passed, 39 skipped in 8.33s
+
+
+COMMAND: D:\AI_ThucChien\K5-L2A-Day06-NguyenVietAnh-2A2026030995-DataGovernanceAndPrivacy\.venv\Scripts\python.exe -X utf8 -m src.main --track t02 --pipeline src.examples.random_baseline --output out/random_baseline --run-name random --offline --seed 42
+[main] track=t02 (Raw QC Triage) input=fixtures\t02_raw_qc output=out\random_baseline seed=42 offline=True pipeline=src.examples.random_baseline
+[main] status=0 runtime=0.0789s -> out\random_baseline\run_info.json
+
+
+COMMAND: D:\AI_ThucChien\K5-L2A-Day06-NguyenVietAnh-2A2026030995-DataGovernanceAndPrivacy\.venv\Scripts\python.exe -X utf8 -m src.main --track t02 --pipeline src.baseline_t02 --output out/baseline --run-name baseline --offline --seed 42
+[main] track=t02 (Raw QC Triage) input=fixtures\t02_raw_qc output=out\baseline seed=42 offline=True pipeline=src.baseline_t02
+[main] status=0 runtime=0.3804s -> out\baseline\run_info.json
+
+
+COMMAND: D:\AI_ThucChien\K5-L2A-Day06-NguyenVietAnh-2A2026030995-DataGovernanceAndPrivacy\.venv\Scripts\python.exe -X utf8 -m src.main --track t02 --pipeline src.pipeline --output out/poc --run-name poc --offline --seed 42
+[main] track=t02 (Raw QC Triage) input=fixtures\t02_raw_qc output=out\poc seed=42 offline=True pipeline=src.pipeline
+[main] status=0 runtime=0.3639s -> out\poc\run_info.json
+
+
+COMMAND: D:\AI_ThucChien\K5-L2A-Day06-NguyenVietAnh-2A2026030995-DataGovernanceAndPrivacy\.venv\Scripts\python.exe -X utf8 -m src.main --track t02 --output out/poc --run-name poc --offline --seed 42
+[main] track=t02 (Raw QC Triage) input=fixtures\t02_raw_qc output=out\poc seed=42 offline=True pipeline=src.pipeline
+[main] status=0 runtime=0.4162s -> out\poc\run_info.json
+
+
+COMMAND: D:\AI_ThucChien\K5-L2A-Day06-NguyenVietAnh-2A2026030995-DataGovernanceAndPrivacy\.venv\Scripts\python.exe -X utf8 -m tools.evaluate_t02_internal
+
+== T02 · Raw QC Triage · run=random_internal
+   gt=data\manual\t02_manual_labels.csv
+   pred=out\random_baseline\ranked_review.csv
+   params={'budget': 20, 'split': 'eval'}
+                   metric       slice    value direction  num  den  N                                 unit
+Defect Recall@B [PRIMARY]         all 0.666667    higher    4    6 40     GT defects in top-B / GT defects
+              Precision@B         all 0.200000    higher    4   20 40              GT defects in top-B / B
+     False alarm in top-B   light=day 0.352941     lower    6   17 20 clean images in top-B / clean images
+     False alarm in top-B  light=dusk 0.500000     lower    1    2  4 clean images in top-B / clean images
+     False alarm in top-B light=night 0.600000     lower    9   15 16 clean images in top-B / clean images
+
+-- slices
+       slice  n  recall_in_topB  false_alarm_in_topB
+   light=day 20        0.333333             0.352941
+  light=dusk  4        1.000000             0.500000
+ light=night 16        1.000000             0.600000
+ defect=blur  2        1.000000                  NaN
+ defect=dark  3        0.666667                  NaN
+defect=glare  1        0.000000                  NaN
+note: B=20, eval N=40
+
+wrote out\internal_eval\metrics_random.json
+
+== T02 · Raw QC Triage · run=baseline_internal
+   gt=data\manual\t02_manual_labels.csv
+   pred=out\baseline\ranked_review.csv
+   params={'budget': 20, 'split': 'eval'}
+                           metric       slice    value direction  num  den  N                                 unit
+        Defect Recall@B [PRIMARY]         all 1.000000    higher  6.0  6.0 40     GT defects in top-B / GT defects
+                      Precision@B         all 0.300000    higher  6.0 20.0 40              GT defects in top-B / B
+Defect-type accuracy (GT defects)         all 0.000000    higher  NaN  NaN  6                             fraction
+             False alarm in top-B   light=day 0.352941     lower  6.0 17.0 20 clean images in top-B / clean images
+             False alarm in top-B  light=dusk 0.500000     lower  1.0  2.0  4 clean images in top-B / clean images
+             False alarm in top-B light=night 0.466667     lower  7.0 15.0 16 clean images in top-B / clean images
+
+-- slices
+       slice  n  recall_in_topB  false_alarm_in_topB
+   light=day 20             1.0             0.352941
+  light=dusk  4             1.0             0.500000
+ light=night 16             1.0             0.466667
+ defect=blur  2             1.0                  NaN
+ defect=dark  3             1.0                  NaN
+defect=glare  1             1.0                  NaN
+note: B=20, eval N=40
+
+wrote out\internal_eval\metrics_baseline.json
+
+== T02 · Raw QC Triage · run=poc_internal
+   gt=data\manual\t02_manual_labels.csv
+   pred=out\poc\ranked_review.csv
+   params={'budget': 20, 'split': 'eval'}
+                           metric       slice    value direction  num  den  N                                 unit
+        Defect Recall@B [PRIMARY]         all 1.000000    higher  6.0  6.0 40     GT defects in top-B / GT defects
+                      Precision@B         all 0.300000    higher  6.0 20.0 40              GT defects in top-B / B
+Defect-type accuracy (GT defects)         all 0.166667    higher  NaN  NaN  6                             fraction
+             False alarm in top-B   light=day 0.588235     lower 10.0 17.0 20 clean images in top-B / clean images
+             False alarm in top-B  light=dusk 0.000000     lower  0.0  2.0  4 clean images in top-B / clean images
+             False alarm in top-B light=night 0.266667     lower  4.0 15.0 16 clean images in top-B / clean images
+
+-- slices
+       slice  n  recall_in_topB  false_alarm_in_topB
+   light=day 20             1.0             0.588235
+  light=dusk  4             1.0             0.000000
+ light=night 16             1.0             0.266667
+ defect=blur  2             1.0                  NaN
+ defect=dark  3             1.0                  NaN
+defect=glare  1             1.0                  NaN
+note: B=20, eval N=40
+
+wrote out\internal_eval\metrics_poc.json
+Baseline: `baseline_internal` (git 595f906, seed 42) · PoC: `poc_internal` (git 595f906, seed 42)
+
+| Metric (unit) | Slice | Baseline | PoC | Δ abs | Δ rel | Better | N |
+|---|---|---|---|---|---|---|---|
+| **Defect Recall@B** (GT defects in top-B / GT defects) | all | 1.0000 | 1.0000 | 0.0000 | +0.0% | higher | 40 |
+| Precision@B (GT defects in top-B / B) | all | 0.3000 | 0.3000 | 0.0000 | +0.0% | higher | 40 |
+| Defect-type accuracy (GT defects) (fraction) | all | 0.0000 | 0.1667 | 0.1667 | baseline=0 | higher | 6 |
+| False alarm in top-B (clean images in top-B / clean images) | light=day | 0.3529 | 0.5882 | 0.2353 | +66.7% | lower | 20 |
+| False alarm in top-B (clean images in top-B / clean images) | light=dusk | 0.5000 | 0.0000 | -0.5000 | -100.0% | lower | 4 |
+| False alarm in top-B (clean images in top-B / clean images) | light=night | 0.4667 | 0.2667 | -0.2000 | -42.9% | lower | 16 |
+| Runtime / 100 items (s) | all | 0.3962 | 0.4335 | | | lower | |
+
+Internal evaluation complete. No parameter or label was changed.
+

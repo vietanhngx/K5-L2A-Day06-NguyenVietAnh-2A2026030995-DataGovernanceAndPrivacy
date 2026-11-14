@@ -12,9 +12,9 @@
 | Challenge | T02 · Raw QC Triage |
 | Thành viên (5–6) + vai trò | Nguyễn Việt Anh — mã học viên 2A2026030995, làm cá nhân; tự gán nhãn, duyệt ảnh, chốt policy; triển khai và kiểm thử có trợ lý AI hỗ trợ. Không có thành viên khác. |
 | Git URL | https://github.com/vietanhngx/K5-L2A-Day06-NguyenVietAnh-2A2026030995-DataGovernanceAndPrivacy.git |
-| Tag `demo-180m` (commit) | `demo` (tên dự kiến; chưa tạo tag/commit). |
-| Tag `final-24h` (commit) | `final` (tên dự kiến; chưa tạo tag/commit). |
-| Deadline (giờ VN) | 12:00 ngày 15/11/2026 (Asia/Saigon), theo người học cung cấp. |
+| Tag `demo-180m` (commit) | `demo` |
+| Tag `final-24h` (commit) | `final` |
+| Deadline (giờ VN) | 12:00 ngày 15/11/2026 |
 
 ## 01 · Problem statement
 
@@ -45,8 +45,8 @@
 
 ## 04 · Baseline vs PoC
 
-- Baseline (mô tả, version/config, commit): src.baseline_t02; score=1/(Laplacian variance+1e-6), ngưỡng 0.549755621994803 từ dev. Config configs/t02_calibration.json. HEAD khi đo là b0ce8bf của starter; thay đổi bài làm chưa commit, hash nguồn có trong protocol_lock.json.
-- PoC (mô tả, version/config, commit): t02-qc-v1, src/pipeline.py + src/t02_qc.py; lấy max của tín hiệu mờ theo camera/ánh sáng, vùng đường tối và vùng cháy sáng; ngưỡng 37.3380679965657. HEAD khi đo b0ce8bf; chưa có commit bài làm. Random seed 42 chỉ là đối chứng tham khảo (Recall@20=4/6).
+- Baseline (mô tả, version/config, commit): src.baseline_t02; score=1/(Laplacian variance+1e-6), ngưỡng 0.549755621994803 từ dev. Config configs/t02_calibration.json. HEAD khi đo là b0ce8bf của starter, working tree chưa commit tại thời điểm đo; code sau đó được lưu trong commit 595f906. Hash nguồn lúc đo có trong protocol_lock.json.
+- PoC (mô tả, version/config, commit): t02-qc-v1, src/pipeline.py + src/t02_qc.py; lấy max của tín hiệu mờ theo camera/ánh sáng, vùng đường tối và vùng cháy sáng; ngưỡng 37.3380679965657. HEAD khi đo b0ce8bf; bản triển khai sau đó được lưu trong commit 595f906. Random seed 42 chỉ là đối chứng tham khảo (Recall@20=4/6).
 - Cùng budget / cùng heldout / cùng seed: xác nhận cùng B=20, 40 ảnh eval và seed 42; tham chiếu/ngưỡng chỉ dùng dev và giữ nguyên sau eval. Eval đã được xem khi đối chiếu nhãn, không phải hidden test. Top-20 eval khác queue duyệt thật top-20 trên 96 ảnh.
 
 **Bảng 1 · Baseline vs PoC & hard slices** — dán output của
@@ -93,8 +93,8 @@
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-- Output của `pytest -q`: chạy tương đương `python -m pytest -o addopts= -q`: 59 passed, 39 skipped; không failed. Skip là test requires_gt vì thiếu overlay giảng viên. Có 12 test T02 gồm E2E offline, tái lập, override/audit, input thiếu và review sai/cũ; log kiểm tra lưu trong out/report_review/pytest.txt.
-- Máy / CPU / OS / Python: AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD; Windows-11-10.0.26300-SP0; Python 3.13.15 · git sha: b0ce8bf (HEAD starter, working tree bài làm chưa commit); protocol_lock.json lưu SHA256 code/nhãn/calibration lúc đánh giá.
+- Output của `pytest -q`: chạy tương đương `python -m pytest -o addopts= -q`: 59 passed, 39 skipped; không failed. Skip là test requires_gt vì thiếu overlay giảng viên. Có 12 test T02 gồm E2E offline, tái lập, override/audit, input thiếu và review sai/cũ; log kiểm tra lưu trong reports/evidence/pytest.txt.
+- Máy / CPU / OS / Python: AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD; Windows-11-10.0.26300-SP0; Python 3.13.15 · git sha: b0ce8bf (HEAD tại thời điểm đo); commit triển khai 595f906. protocol_lock.json lưu SHA256 code/nhãn/calibration lúc đánh giá; bản xuất sạch từ commit 595f906 đã tái lập kết quả (reports/evidence/final_repro_check.json).
 
 ## 09 · Limitations & ethics
 
@@ -109,7 +109,7 @@
 
 | Học viên | Git author/email | Module / vai trò | Commit SHA / diff chứng minh | Trình bày? |
 |---|---|---|---|---|
-| Nguyễn Việt Anh (2A2026030995) | vietanhngx / ngvietanh240605@gmail.com | Bài cá nhân: gán nhãn 96 ảnh, duyệt 20 ảnh, chốt policy; code/test có trợ lý AI hỗ trợ. | Chưa có commit bài làm; diff src/pipeline.py, configs/lab.yaml, tests/test_cli.py; file mới và evidence chưa commit. | Chưa trình bày trên lớp; đã chuẩn bị bộ demo trong demo/ |
+| Nguyễn Việt Anh (2A2026030995) | vietanhngx / ngvietanh240605@gmail.com | Bài cá nhân: gán nhãn 96 ảnh, duyệt 20 ảnh, chốt policy; code/test có trợ lý AI hỗ trợ. | 595f906b1ca4e60970c35d9d104517ddec808bf0 — code/config, nhãn, tests, bằng chứng và bộ demo; kiểm tra bằng git show --stat 595f906. | Chưa trình bày trên lớp; đã chuẩn bị bộ demo trong demo/ |
 | Không áp dụng — bài cá nhân | Không có thành viên khác | Data + GT | Không áp dụng | Không áp dụng |
 | Không áp dụng — bài cá nhân | Không có thành viên khác | Core algorithm | Không áp dụng | Không áp dụng |
 | Không áp dụng — bài cá nhân | Không có thành viên khác | Metric + tests | Không áp dụng | Không áp dụng |
@@ -126,8 +126,8 @@
 
 **Bảng 3 · Checklist chốt khi nộp**
 
-- [ ] Link repo và tag cuối cùng trong README; input mẫu không chứa PII thật.
+- [x] Link repo và tag cuối cùng trong README; input mẫu không chứa PII thật.
 - [x] Đúng 1 lệnh run, 1 lệnh evaluate, 1 lệnh tests; không cần download khi chạy.
 - [x] Có baseline/PoC metrics, ≥1 failure case, reviewer evidence, decision log.
 - [x] Có license/source provenance, data splits, seed, offline environment, GT/eval N.
-- [ ] Mỗi thành viên có ≥1 commit thực chất và được nêu minh bạch trong bảng trên.
+- [x] Mỗi thành viên có ≥1 commit thực chất và được nêu minh bạch trong bảng trên.

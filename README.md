@@ -7,6 +7,13 @@ vấn đề, baseline, thuật toán, đánh giá trung thực, human-in-the-loo
 > Repo **không** chứa lời giải. `src/pipeline.py` là file nhóm sở hữu; mọi thuật toán (kể cả baseline) do nhóm tự cài.
 > Tài liệu học tập, không thay tư vấn pháp lý.
 
+Bài nộp cá nhân **G04 / T02 — Nguyễn Việt Anh (2A2026030995)**:
+[repo](https://github.com/vietanhngx/K5-L2A-Day06-NguyenVietAnh-2A2026030995-DataGovernanceAndPrivacy),
+tag của bài này là **`demo`** và **`final`** theo lựa chọn người học.
+Xem [báo cáo](reports/group_report.md), [lệnh chạy trên Windows](docs/T02_WORKFLOW.md)
+và [bộ demo đã chuẩn bị](demo/README.md). Người học chưa trình bày trên lớp.
+Đánh giá trong bài dùng nhãn thủ công nội bộ, không phải GT chính thức của giảng viên.
+
 ## 1. Quickstart (≤ 5 phút, chạy offline)
 
 ```bash
@@ -45,20 +52,26 @@ kiểm tra nội bộ (ví dụ tự gán nhãn vài mẫu) và ghi rõ trong re
 README.md · requirements.txt · pyproject.toml · Makefile · run.sh
 configs/lab.yaml               # config của nhóm (chọn track, owner, seed)
 configs/tracks/tXX.yaml        # default params + eval params cho từng track
+configs/t02_calibration.json   # tham chiếu và ngưỡng T02 đã chọn từ dev
 src/main.py                    # one-command runner (contract)  — KHÔNG cần sửa
 src/pipeline.py                # ★ PIPELINE CỦA NHÓM: load → process → rank → review → decide
+src/baseline_t02.py · src/t02_qc.py · src/t02_review_page.py # baseline, feature/score và UI duyệt T02
 src/evaluate.py · src/compare.py
 src/examples/random_baseline.py  # ví dụ nối dây E2E (random = baseline của T01/T02/T11/T13)
 src/common/                    # hạ tầng dùng chung (xem bảng dưới)
 src/metrics/                   # thư viện metric + evaluator chuẩn cho 14 track (tracks.py)
 fixtures/<track>/              # dữ liệu synthetic offline, KHÔNG có PII thật; gt/ chỉ có ở repo giảng viên
 data/real/                     # (gitignored) mẫu dữ liệu thật do giảng viên tải trước
+data/manual/                   # nhãn nội bộ được người học xác nhận và lịch sử nguồn nhãn
 docs/tracks/T01..T14.md        # đề bài chi tiết + data schema + metric + output contract
 docs/INSTRUCTOR_SETUP.md       # chuẩn bị gói offline P0–P6, dữ liệu thật từ Hugging Face
+docs/T02_WORKFLOW.md           # lệnh chạy, review và đánh giá nội bộ trên Windows
 reports/                       # group_report.md, metric_contract.md, team_contributions.csv, metrics_*.json
+reports/evidence/              # bản lưu output thật, audit và bằng chứng kiểm tra tái lập
 tests/                         # test hạ tầng + metric; nhóm thêm test của mình ở đây
 tools/                         # download_real_samples, verify_manifests, preflight (generator ở repo giảng viên)
-demo/                          # slides / ảnh chụp demo
+demo/                          # slide PPTX/PDF, hướng dẫn 6 bước, công cụ demo
+out/                           # output chạy cục bộ, không đưa vào Git; được tạo lại bằng lệnh chạy
 ```
 
 ### Hạ tầng dùng chung (`src/common/`)

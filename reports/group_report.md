@@ -126,7 +126,7 @@
 
 **Bảng 3 · Checklist chốt khi nộp**
 
-- [x] Link repo và tag cuối cùng trong README; input mẫu không chứa PII thật.
+- [ ] Link repo và tag cuối cùng trong README; input mẫu không chứa PII thật.
 - [x] Đúng 1 lệnh run, 1 lệnh evaluate, 1 lệnh tests; không cần download khi chạy.
 - [x] Có baseline/PoC metrics, ≥1 failure case, reviewer evidence, decision log.
 - [x] Có license/source provenance, data splits, seed, offline environment, GT/eval N.

@@ -1,0 +1,26 @@
+{
+  "track": "t02",
+  "run_name": "random",
+  "status": 0,
+  "seed": 42,
+  "offline": true,
+  "input": "fixtures\\t02_raw_qc",
+  "output": "out\\random_baseline",
+  "pipeline": "src.examples.random_baseline",
+  "config_hash": "fc26df394a01",
+  "git_sha": "b0ce8bf",
+  "runtime_seconds": 0.0838,
+  "stats": {
+    "n_items": 96
+  },
+  "machine": {
+    "python": "3.13.15",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD"
+  },
+  "output_check": {
+    "pred_file": "out\\random_baseline\\ranked_review.csv",
+    "exists": true,
+    "missing_columns": []
+  }
+}

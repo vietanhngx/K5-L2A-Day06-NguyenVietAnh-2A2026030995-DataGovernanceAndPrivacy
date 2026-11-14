@@ -1,0 +1,6 @@
+ts,scope,status,canonical,reason_code,reason,owner,evidence
+2026-11-14T19:09:44+00:00,t02:review_queue,HOLD,HOLD,AWAITING_POLICY_APPROVAL,Decision policy is awaiting user approval,Nguyễn Việt Anh — người thực hiện và tự review,
+2026-11-14T19:11:51+00:00,t02:review_queue,HOLD,HOLD,AWAITING_POLICY_APPROVAL,Chờ bạn duyệt chính sách quyết định; các lựa chọn từng ảnh đã được lưu riêng nếu có.,Nguyễn Việt Anh — người thực hiện và tự review,out\poc\review_queue.csv;out\poc\final_actions.csv;out\poc\audit_log.jsonl
+2026-11-14T19:12:36+00:00,t02:review_queue,HOLD,HOLD,AWAITING_POLICY_APPROVAL,Chờ bạn duyệt chính sách quyết định; các lựa chọn từng ảnh đã được lưu riêng nếu có.,Nguyễn Việt Anh — người thực hiện và tự review,out\poc\review_queue.csv;out\poc\final_actions.csv;out\poc\audit_log.jsonl
+2026-11-14T19:17:19+00:00,t02:review_queue,HOLD,HOLD,AWAITING_POLICY_APPROVAL,Chờ bạn duyệt chính sách quyết định; các lựa chọn từng ảnh đã được lưu riêng nếu có.,Nguyễn Việt Anh — người thực hiện và tự review,out\poc\review_queue.csv;out\poc\final_actions.csv;out\poc\audit_log.jsonl
+2026-11-14T19:19:18+00:00,t02:review_queue,RECAPTURE,REWORK,CONFIRMED_SEVERE_DEFECT,Người duyệt xác nhận có ảnh cần chụp lại trong hàng chờ.,Nguyễn Việt Anh — người thực hiện và tự review,out\poc\review_queue.csv;out\poc\final_actions.csv;out\poc\audit_log.jsonl

@@ -1,0 +1,72 @@
+{
+  "feature_version": "t02-qc-v1",
+  "fit_split": "dev",
+  "n_fit": 56,
+  "n_dev_defects": 4,
+  "dev_labels_sha256": "97b2b25f1d259b0b02d19404726af1e952bdde94e4590edc6431242621248b83",
+  "reference_global": {
+    "laplacian": 777.3162841796875,
+    "road_p90": 124.98844909667969
+  },
+  "reference_by_light": {
+    "day": {
+      "laplacian": 875.7705688476562,
+      "road_p90": 131.2469940185547
+    },
+    "dusk": {
+      "laplacian": 703.7586059570312,
+      "road_p90": 120.90600204467773
+    },
+    "night": {
+      "laplacian": 360.9302062988281,
+      "road_p90": 83.01599884033203
+    }
+  },
+  "references": {
+    "cam_A|day": {
+      "laplacian": 955.0102844238281,
+      "road_p90": 134.45140075683594
+    },
+    "cam_A|dusk": {
+      "laplacian": 777.3162841796875,
+      "road_p90": 121.22949981689453
+    },
+    "cam_B|day": {
+      "laplacian": 266.8829650878906,
+      "road_p90": 127.01729583740234
+    },
+    "cam_B|dusk": {
+      "laplacian": 174.46369171142578,
+      "road_p90": 116.61199951171875
+    },
+    "cam_B|night": {
+      "laplacian": 360.9302062988281,
+      "road_p90": 83.01599884033203
+    }
+  },
+  "thresholds": {
+    "laplacian": 0.549755621994803,
+    "poc": 37.3380679965657
+  },
+  "threshold_selection": "Maximum dev binary F1; ties: fewer FP then larger threshold. No eval tuning.",
+  "fixed_cue_anchors": {
+    "blur_reference_fraction": 0.25,
+    "dark_reference_fraction": 0.3,
+    "glare_image_area": 0.015
+  },
+  "label_source": "Student manual internal reference; not instructor GT",
+  "dev_fit_results": {
+    "laplacian": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 1,
+      "f1": 0.8571428571428571
+    },
+    "poc": {
+      "tp": 3,
+      "fp": 4,
+      "fn": 1,
+      "f1": 0.5454545454545454
+    }
+  }
+}

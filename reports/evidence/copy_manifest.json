@@ -1,0 +1,150 @@
+{
+  "method": "Byte-identical copies of real run/evaluation evidence; no metric values edited.",
+  "files": [
+    {
+      "source": "out/internal_eval/metrics_baseline.json",
+      "copy": "reports/metrics_baseline.json",
+      "sha256": "b6a07f8ec31981e45ae6fd42332a94f3053daf5a3cee2c2f1ab99f6309e95760"
+    },
+    {
+      "source": "out/internal_eval/metrics_poc.json",
+      "copy": "reports/metrics_poc.json",
+      "sha256": "0dc8559d065fff0fbbf4e458e57e5ecbc95bf01b14ed166fbcc0ab78a5ba3df7"
+    },
+    {
+      "source": "out/internal_eval/metrics_random.json",
+      "copy": "reports/metrics_random.json",
+      "sha256": "019b53c25bfa6ec6ee8c42bf240d6b1066901994728b9f840bf32cf3100e61a5"
+    },
+    {
+      "source": "out/internal_eval/summary.json",
+      "copy": "reports/internal_evaluation_summary.json",
+      "sha256": "299a2744eaee854b46359bbc46286ca07016b2b7736218c6b61c2ce77a2afd36"
+    },
+    {
+      "source": "out/internal_eval/protocol_lock.json",
+      "copy": "reports/evaluation_protocol_lock.json",
+      "sha256": "22547cdaceba9745a5925b8019206b8ec3e57e32f80ac3c8f7890d9e735f799b"
+    },
+    {
+      "source": "out/poc/review_queue_reviewed.csv",
+      "copy": "reports/review_queue.csv",
+      "sha256": "a329251be2de89c1832a9ef762796ca530e146d0f523aa956ce3dbf8a3854f56"
+    },
+    {
+      "source": "out/poc/decision_log.csv",
+      "copy": "reports/decision_log.csv",
+      "sha256": "34219f205f69171d9ecb6ec13cc47da8118aa309e1fa152dd07225b628c75850"
+    },
+    {
+      "source": "out/poc/decision.json",
+      "copy": "reports/evidence/poc/decision.json",
+      "sha256": "64e6d0d48e5e2e281e8288a1dc22b3a2c86b7467271767de586b5f395d6fb3f7"
+    },
+    {
+      "source": "out/poc/audit_log.jsonl",
+      "copy": "reports/evidence/poc/audit_log.jsonl",
+      "sha256": "04c5a31100411a3fed5cb88d5a30e56a3ec529bebc4a0b009a7b352f1e4f94e7"
+    },
+    {
+      "source": "out/poc/review_queue.csv",
+      "copy": "reports/evidence/poc/review_queue.csv",
+      "sha256": "721f8f647d61dbf42e9b2fccfcd0ba18be7f31357d735ad8744c0d477379a45f"
+    },
+    {
+      "source": "out/poc/raw_predictions.csv",
+      "copy": "reports/evidence/poc/raw_predictions.csv",
+      "sha256": "1056fedd0220a0be9f027d4867c92c9221d1446a249b8963ceadc7fb48629810"
+    },
+    {
+      "source": "out/poc/ranked_review.csv",
+      "copy": "reports/evidence/poc/ranked_review.csv",
+      "sha256": "d510bb809fae35ee2edca2743e1ece3c6eb7eb23e88a3538e74c77112e4629e3"
+    },
+    {
+      "source": "out/poc/final_actions.csv",
+      "copy": "reports/evidence/poc/final_actions.csv",
+      "sha256": "3ba7ab301a9c0f534d61ea6edba2ccab9d1dc3c06621f40bc8f073bd16ca68ef"
+    },
+    {
+      "source": "out/poc/run_info.json",
+      "copy": "reports/evidence/poc/run_info.json",
+      "sha256": "36b4d89f2d78e2f67bcf44bebfc384e3f6192c7e1dd8cbbe38965f35057cef38"
+    },
+    {
+      "source": "out/baseline/raw_predictions.csv",
+      "copy": "reports/evidence/baseline/raw_predictions.csv",
+      "sha256": "0da1d200eca94dad613f625b9b87be19b4966442c04afba558bb8f20122e168f"
+    },
+    {
+      "source": "out/baseline/ranked_review.csv",
+      "copy": "reports/evidence/baseline/ranked_review.csv",
+      "sha256": "71121ce484c117e6a3a2f56c641ba8d677b65bd6a10f5165357faee78e356e94"
+    },
+    {
+      "source": "out/baseline/run_info.json",
+      "copy": "reports/evidence/baseline/run_info.json",
+      "sha256": "9e7e7883f3d91eefd29ca6b42682bd6735f829e44e289413afb60fb0d4af7f09"
+    },
+    {
+      "source": "out/random_baseline/ranked_review.csv",
+      "copy": "reports/evidence/random/ranked_review.csv",
+      "sha256": "c9c520e6c5d030d9929371aa1ac20cc7dc085cb1a6b9322697cc93105541da1b"
+    },
+    {
+      "source": "out/random_baseline/run_info.json",
+      "copy": "reports/evidence/random/run_info.json",
+      "sha256": "9e3d5037f303b6d7a331a45bb4cf6de4322ea562709d7a321cf8133c4151f967"
+    },
+    {
+      "source": "out/report_review/pytest.txt",
+      "copy": "reports/evidence/pytest.txt",
+      "sha256": "27a4f42735147c1d40dad2f1879390f968745d723883487dba80f145660f7567"
+    },
+    {
+      "source": "out\\internal_eval\\camera_slices_baseline.csv",
+      "copy": "reports\\evidence\\evaluation\\camera_slices_baseline.csv",
+      "sha256": "e97de138ffc728728e99deeee995fce3efcc3a0dd0e3f87add7e2651ffea172e"
+    },
+    {
+      "source": "out\\internal_eval\\camera_slices_poc.csv",
+      "copy": "reports\\evidence\\evaluation\\camera_slices_poc.csv",
+      "sha256": "2478e8275c06de3839e882f57df04c7a6503bde7574c205c44a5aacfb6c086d9"
+    },
+    {
+      "source": "out\\internal_eval\\camera_slices_random.csv",
+      "copy": "reports\\evidence\\evaluation\\camera_slices_random.csv",
+      "sha256": "c6a878d4b1abb360b68d43e49053438cb61ab31da8bd478673d7a0bed7932ff2"
+    },
+    {
+      "source": "out\\internal_eval\\slices_baseline.csv",
+      "copy": "reports\\evidence\\evaluation\\slices_baseline.csv",
+      "sha256": "80d9defa254b1c69f670cf7f297aea7766cfc5b510023676133b256b08f9974c"
+    },
+    {
+      "source": "out\\internal_eval\\slices_poc.csv",
+      "copy": "reports\\evidence\\evaluation\\slices_poc.csv",
+      "sha256": "407724937d6b474455830e85a48e97301b15523a29188ad1ab2bdfcca5e67ef5"
+    },
+    {
+      "source": "out\\internal_eval\\slices_random.csv",
+      "copy": "reports\\evidence\\evaluation\\slices_random.csv",
+      "sha256": "4af8d3ecddb262c5928ba975be4717e9ed03e7e0cd8efedd0d7239a1a559e0c8"
+    },
+    {
+      "source": "out\\internal_eval\\image_results_baseline.csv",
+      "copy": "reports\\evidence\\evaluation\\image_results_baseline.csv",
+      "sha256": "be6df77f964765535096e95608e672b8bda6b75579e38966c5184fe6b14ac8f7"
+    },
+    {
+      "source": "out\\internal_eval\\image_results_poc.csv",
+      "copy": "reports\\evidence\\evaluation\\image_results_poc.csv",
+      "sha256": "534fd6ab53b1320a1352d58bec3bf0be2c4b441fd3232feddf35883435abb5b2"
+    },
+    {
+      "source": "out\\internal_eval\\image_results_random.csv",
+      "copy": "reports\\evidence\\evaluation\\image_results_random.csv",
+      "sha256": "3190cd17f689143075d9bdd053ddee4a24f8dea01d68b6dc6eb9ad1a8d5cf31a"
+    }
+  ]
+}

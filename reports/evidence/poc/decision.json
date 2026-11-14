@@ -1,0 +1,18 @@
+{
+  "status": "RECAPTURE",
+  "reason_code": "CONFIRMED_SEVERE_DEFECT",
+  "reason": "Người duyệt xác nhận có ảnh cần chụp lại trong hàng chờ.",
+  "owner": "Nguyễn Việt Anh — người thực hiện và tự review",
+  "scope": "t02:review_queue",
+  "evidence": [
+    "out\\poc\\review_queue.csv",
+    "out\\poc\\final_actions.csv",
+    "out\\poc\\audit_log.jsonl"
+  ],
+  "metrics": {
+    "queue_size": 20,
+    "confirmed_reviews": 20
+  },
+  "ts": "2026-11-14T19:19:18+00:00",
+  "canonical": "REWORK"
+}

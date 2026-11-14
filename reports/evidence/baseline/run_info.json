@@ -1,0 +1,30 @@
+{
+  "track": "t02",
+  "run_name": "baseline",
+  "status": 0,
+  "seed": 42,
+  "offline": true,
+  "input": "fixtures\\t02_raw_qc",
+  "output": "out\\baseline",
+  "pipeline": "src.baseline_t02",
+  "config_hash": "79caa4a91de8",
+  "git_sha": "b0ce8bf",
+  "runtime_seconds": 0.4113,
+  "stats": {
+    "method": "laplacian",
+    "calibration_sha256": "a7f8d3dc6d9e7bc35cadd77caac5087b24c37b7fd6a7f5d6bdcfea106ee2be73",
+    "n_items": 96,
+    "n_reviewed": 0,
+    "n_queue": 20
+  },
+  "machine": {
+    "python": "3.13.15",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD"
+  },
+  "output_check": {
+    "pred_file": "out\\baseline\\ranked_review.csv",
+    "exists": true,
+    "missing_columns": []
+  }
+}

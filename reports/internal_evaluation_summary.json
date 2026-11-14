@@ -1,0 +1,201 @@
+{
+  "random": {
+    "eval_n": 40,
+    "eval_severe_defects": 6,
+    "hits_in_top20": 4,
+    "recall_at20": 0.6666666666666666,
+    "precision_at20": 0.2,
+    "missed_defect_ids": [
+      "img_17_3",
+      "img_17_2"
+    ],
+    "usable_in_top20": [
+      "img_01_1",
+      "img_05_2",
+      "img_05_3",
+      "img_03_1",
+      "img_13_0",
+      "img_01_3",
+      "img_19_3",
+      "img_06_0",
+      "img_01_2",
+      "img_05_0",
+      "img_13_2",
+      "img_15_0",
+      "img_13_1",
+      "img_19_1",
+      "img_03_0",
+      "img_16_0"
+    ],
+    "bootstrap": {
+      "method": "source-scene cluster bootstrap, percentile 95%, fixed B=20",
+      "repetitions": 2000,
+      "seed": 42,
+      "n_scenes": 10,
+      "recall_valid_repetitions": 1992,
+      "recall_ci95": [
+        0.0,
+        1.0
+      ],
+      "precision_ci95": [
+        0.0,
+        0.35
+      ]
+    },
+    "camera_slices": [
+      {
+        "camera_id": "cam_A",
+        "n": 28,
+        "defects": 4,
+        "hits_in_eval_top20": 2,
+        "usable_in_eval_top20": 12,
+        "recall": 0.5
+      },
+      {
+        "camera_id": "cam_B",
+        "n": 12,
+        "defects": 2,
+        "hits_in_eval_top20": 2,
+        "usable_in_eval_top20": 4,
+        "recall": 1.0
+      }
+    ],
+    "runtime_per_100_items_s": 0.0873
+  },
+  "baseline": {
+    "eval_n": 40,
+    "eval_severe_defects": 6,
+    "hits_in_top20": 6,
+    "recall_at20": 1.0,
+    "precision_at20": 0.3,
+    "missed_defect_ids": [],
+    "usable_in_top20": [
+      "img_19_3",
+      "img_16_2",
+      "img_06_3",
+      "img_06_0",
+      "img_15_0",
+      "img_03_2",
+      "img_06_2",
+      "img_03_0",
+      "img_01_2",
+      "img_03_3",
+      "img_16_3",
+      "img_23_2",
+      "img_05_2",
+      "img_19_2"
+    ],
+    "bootstrap": {
+      "method": "source-scene cluster bootstrap, percentile 95%, fixed B=20",
+      "repetitions": 2000,
+      "seed": 42,
+      "n_scenes": 10,
+      "recall_valid_repetitions": 1992,
+      "recall_ci95": [
+        0.8299242424242426,
+        1.0
+      ],
+      "precision_ci95": [
+        0.1,
+        0.55
+      ]
+    },
+    "camera_slices": [
+      {
+        "camera_id": "cam_A",
+        "n": 28,
+        "defects": 4,
+        "hits_in_eval_top20": 4,
+        "usable_in_eval_top20": 7,
+        "recall": 1.0
+      },
+      {
+        "camera_id": "cam_B",
+        "n": 12,
+        "defects": 2,
+        "hits_in_eval_top20": 2,
+        "usable_in_eval_top20": 7,
+        "recall": 1.0
+      }
+    ],
+    "runtime_per_100_items_s": 0.4284,
+    "threshold_classification": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "tn": 34,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n": 40
+    }
+  },
+  "poc": {
+    "eval_n": 40,
+    "eval_severe_defects": 6,
+    "hits_in_top20": 6,
+    "recall_at20": 1.0,
+    "precision_at20": 0.3,
+    "missed_defect_ids": [],
+    "usable_in_top20": [
+      "img_19_3",
+      "img_16_2",
+      "img_01_2",
+      "img_05_3",
+      "img_06_3",
+      "img_23_2",
+      "img_23_1",
+      "img_23_0",
+      "img_06_2",
+      "img_06_0",
+      "img_16_3",
+      "img_19_0",
+      "img_19_1",
+      "img_19_2"
+    ],
+    "bootstrap": {
+      "method": "source-scene cluster bootstrap, percentile 95%, fixed B=20",
+      "repetitions": 2000,
+      "seed": 42,
+      "n_scenes": 10,
+      "recall_valid_repetitions": 1992,
+      "recall_ci95": [
+        1.0,
+        1.0
+      ],
+      "precision_ci95": [
+        0.1,
+        0.55
+      ]
+    },
+    "camera_slices": [
+      {
+        "camera_id": "cam_A",
+        "n": 28,
+        "defects": 4,
+        "hits_in_eval_top20": 4,
+        "usable_in_eval_top20": 11,
+        "recall": 1.0
+      },
+      {
+        "camera_id": "cam_B",
+        "n": 12,
+        "defects": 2,
+        "hits_in_eval_top20": 2,
+        "usable_in_eval_top20": 3,
+        "recall": 1.0
+      }
+    ],
+    "runtime_per_100_items_s": 0.4584,
+    "threshold_classification": {
+      "tp": 1,
+      "fp": 2,
+      "fn": 5,
+      "tn": 32,
+      "precision": 0.3333333333333333,
+      "recall": 0.16666666666666666,
+      "f1": 0.2222222222222222,
+      "n": 40
+    }
+  }
+}

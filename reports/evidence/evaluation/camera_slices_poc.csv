@@ -1,0 +1,3 @@
+camera_id,n,defects,hits_in_eval_top20,usable_in_eval_top20,recall
+cam_A,28,4,4,11,1.0
+cam_B,12,2,2,3,1.0

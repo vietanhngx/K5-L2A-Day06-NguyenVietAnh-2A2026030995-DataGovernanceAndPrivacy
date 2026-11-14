@@ -1,0 +1,44 @@
+{
+  "source_file": "D:\\00_Downloads\\t02_manual_labels.csv",
+  "source_sha256": "5214c3c5881ac4ea067ca4915fbff7686d04d1da5a6e4d0399e2c8c3c731b1fc",
+  "output_sha256": "2739ae1b46de82ff142abe3ac1e68c962bc9ecc28e2656a2b71817784ea02b96",
+  "label_source": "Student manual labels with two user-approved corrections; not instructor GT.",
+  "changes": [
+    {
+      "image_id": "img_08_3",
+      "before": {
+        "defect_type": "compression",
+        "severity": "1",
+        "is_defect": "0"
+      },
+      "after": {
+        "defect_type": "dark",
+        "severity": "2",
+        "is_defect": "1"
+      },
+      "approval_source": "User approval in conversation: accepted img_08_3 and img_17_2."
+    },
+    {
+      "image_id": "img_17_2",
+      "before": {
+        "defect_type": "glare",
+        "severity": "1",
+        "is_defect": "0"
+      },
+      "after": {
+        "defect_type": "glare",
+        "severity": "2",
+        "is_defect": "1"
+      },
+      "approval_source": "User approval in conversation: accepted img_08_3 and img_17_2."
+    }
+  ],
+  "explicitly_retained": {
+    "image_id": "img_21_3",
+    "defect_type": "compression",
+    "severity": "2",
+    "is_defect": "1",
+    "user_reason": "Vỡ hình nặng; không thấy biển số xe ô tô."
+  },
+  "original_annotator_and_label_timestamps": "Preserved from source; corrections are recorded separately here."
+}

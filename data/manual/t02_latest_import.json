@@ -1,0 +1,23 @@
+{
+  "source_file": "D:\\00_Downloads\\t02_manual_labels.csv",
+  "source_sha256": "fa40a3bb662e78cc87fb697a519e3afb5de7144655592879a234247e62d4a644",
+  "previous_sha256": "2739ae1b46de82ff142abe3ac1e68c962bc9ecc28e2656a2b71817784ea02b96",
+  "previous_snapshot": "data\\manual\\history\\t02_manual_labels_2739ae1b46de.csv",
+  "action": "Replaced working internal labels with user-requested latest download, byte-for-byte; no label edits.",
+  "label_changes_vs_previous": [
+    {
+      "image_id": "img_08_3",
+      "changes": {
+        "severity": {
+          "before": "2",
+          "after": "1"
+        },
+        "is_defect": {
+          "before": "1",
+          "after": "0"
+        }
+      }
+    }
+  ],
+  "supersedes": "Earlier working copy; t02_label_corrections.json describes only the prior version."
+}
